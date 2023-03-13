@@ -24,3 +24,30 @@ void ShowArray(string[] array)
 
 Console.WriteLine($"Исходный массив: ");
 ShowArray(array);
+
+string[] NewArray(string[] array)
+{
+    int lengthOfNewArray = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3) lengthOfNewArray++;
+    }
+
+    string[] newArray = new string[lengthOfNewArray];
+
+    int index = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[index] = array[i];
+            index++;
+        }
+    }
+    return newArray;
+
+}
+
+Console.WriteLine();
+Console.WriteLine($"Полученный массив из строк, длина которых меньше либо равна 3 символа :");
+ShowArray(NewArray(array));
