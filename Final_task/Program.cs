@@ -13,3 +13,14 @@ array[5] = "1567";
 array[6] = "Russia";
 array[7] = "Denmark";
 array[8] = "Kazan";
+
+void ShowArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
+Console.WriteLine($"Исходный массив: ");
+ShowArray(array);
